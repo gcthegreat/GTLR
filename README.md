@@ -1,2 +1,2 @@
 # GTLR
-Team Assignemtn
+Team Assignment
