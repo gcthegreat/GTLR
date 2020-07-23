@@ -1,4 +1,5 @@
- .hed{
+ /*  this is a class so it effects more than one thing, mostly the header. */
+    .hed{
      position:relative;
      background-color:black;
      color:white;
@@ -6,8 +7,10 @@
      text-align:center;
      padding:15px;
      top:20px;
+     height: 230px;
  }
 
+  /* this is the heading tag where it says "Welcome to GTLR" */
  #Header{
    margin-left:400px;
    background-color:black;
@@ -19,7 +22,7 @@
  
  
  
- 
+  /* all the CSS for the video background. */
  
  #myVideo {
     position: absolute;
@@ -27,7 +30,7 @@
     bottom: 0;
     min-width: 100%;
     min-height: 50%;
-    top:215px;
+    top:400px;
   }
   
 
