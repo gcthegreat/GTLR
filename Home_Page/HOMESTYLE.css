@@ -38,6 +38,35 @@ top:60px;
   left:1020px;
 top:60px;
  }
+ #jac{
+  position:absolute;
+  width:160px;
+  height:160px;
+  left:190px;
+top:60px;
+ }
+ #bri{
+  position:absolute;
+  width:160px;
+  height:160px;
+  left:1186px;
+top:60px;
+ }
+ #isa{
+  position:absolute;
+  width:160px;
+  height:160px;
+  left:1357px;
+top:60px;
+ }
+ #adam{
+  position:absolute;
+  width:160px;
+  height:160px;
+  left:20px;
+top:60px;
+ }
+
 
  #regantxt{
   font-family: 'Josefin Sans', sans-serif;
