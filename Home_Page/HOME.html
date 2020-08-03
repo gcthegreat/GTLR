@@ -47,6 +47,7 @@ THE SOFTWARE IS PROVIDED “AS IS”, WITHOUT WARRANTY OF ANY KIND, EXPRESS OR I
     <link href="https://fonts.googleapis.com/css2?family=Monoton&display=swap" rel="stylesheet"> 
 
 
+     <!-- Navbar with links to other websites -->
     <body class="body">
         <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
             <a class="navbar-brand" href="#">Home Page</a>
@@ -56,13 +57,16 @@ THE SOFTWARE IS PROVIDED “AS IS”, WITHOUT WARRANTY OF ANY KIND, EXPRESS OR I
             <div class="collapse navbar-collapse" id="navbarText">
               <ul class="navbar-nav mr-auto">
                 <li class="nav-item active">
-                  <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+                  <a class="nav-link" href="HOME.html">Home <span class="sr-only">(current)</span></a>
                 </li>
                 <li class="nav-item">
-                  <a class="nav-link" href="#">Features</a>
+                  <a class="nav-link" href="../fashion.html">Fashion</a>
                 </li>
                 <li class="nav-item">
-                  <a class="nav-link" href="#">Pricing</a>
+                  <a class="nav-link" href="../top_game_shows.html">Games</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="../allstar.html">All-Star</a>
                 </li>
               </ul>
               <span class="navbar-text">
@@ -72,9 +76,10 @@ THE SOFTWARE IS PROVIDED “AS IS”, WITHOUT WARRANTY OF ANY KIND, EXPRESS OR I
           </nav>
         <img class="Header" src="welcome-to-gtlr2.png" alt="Header text">
 
-        <p class="hed">Cought  everyone  "slacking" :)</p>
+        <p class="hed">Caught  everyone  "slacking" :)</p>
 
         
+         <!-- images of members -->
         <img id="mcgrady" src="../images/im_sleep2.png" alt="mcgrady">
         <img id="myk" src="../images/im_sleep.png" alt="myk">
         <img id="bri" src="../images/bri_sleep.png" alt="bri">
@@ -82,19 +87,51 @@ THE SOFTWARE IS PROVIDED “AS IS”, WITHOUT WARRANTY OF ANY KIND, EXPRESS OR I
         <img id="jac" src="../images/jacob_sleep.png" alt="jacob">
         <img id="adam" src="../images/adam_sleep.png" alt="adam">
 
+
+
+         <!-- Descriptions of members -->
         <div class="container">
-          <div class="row">
+          <div class="row" style=>
             <div class="col-sm-4">
               <img id="regan" src="../images/regan_boi.png" alt="regan">
             </div>
             <div class="col-sm-4">
-              <p id="regantxt">My hobbies and interest:</p>
+              <p id="descTXT">Regan's hobbies and interest:</p>
             </div>
             <div class="col-sm-4">
-              <p id="regantxt">Recently, I have been skateboarding a lot more lately and as always I've been playing video games with my friends from school over the summer now. I am also on my year 3 of a tech computer class at school where I will finish with my A++ exam and hopfully look towards a Cyber security job for collage.</p>
+              <p id="descTXT">Recently, I have been skateboarding a lot more lately and as always I've been playing video games with my friends from school over the summer now. I am also on my year 3 of a tech computer class at school where I will finish with my A++ exam and hopfully look towards a Cyber security job for collage.</p>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-sm-4">
+              <img id="tony" src="../images/tony.jpeg" alt="tony">
+            </div>
+            <div class="col-sm-4">
+             <p id="descTXT"> Tony's hobbies and interest:</p>
+            </div>
+            <div class="col-sm-4">
+              <p id="descTXT">my name Tony Rodriguez I go to edgewater highschool i play baseball basketball and football I like music and going out with friends and couseing trouble (sometimes)</p>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-sm-4">
+              <img id="tony" src="../images/liya.jpg" alt="tony">
+            </div>
+            <div class="col-sm-4">
+             <p id="descTXT"> Liya's hobbies and interest:</p>
+            </div>
+            <div class="col-sm-4">
+              <p id="descTXT">My name is Liya Thomas I am & yes I am the only girl on the GTLR team,but I have a passion for doing hair, I plan to become a entrepreneur after I turn 16, and start "The Deauviance Collection" .I also love to dress up and have my hair done. My hobbies include, doing extracurriculars, doing hair, dressing up, dancing, and listening to music, And yea that's me. 
+
+              </p>
             </div>
           </div>
         </div>
+
+
+
+
+
         
 
 
@@ -103,6 +140,58 @@ THE SOFTWARE IS PROVIDED “AS IS”, WITHOUT WARRANTY OF ANY KIND, EXPRESS OR I
  <video autoplay muted loop id="video">
   <source src="dark_valley.mp4" type="video/mp4">
 </video>
+
+
+
+<!--These are the rectangles moving in script. -->
+
+<div id="rect0" class="rect timeout">Winning team?</div>
+<div id="rect1" class="rect anim-frame">Everyone here sleep lmao</div>
+
+
+
+<script>
+
+window.onload = () => {
+  startSetTimeoutAnimation();
+  startAnimFrameAnimation();
+};
+
+function startSetTimeoutAnimation() {
+  const refreshRate = 1000 / 120;
+  const maxXPosition = 1320;
+  let rect = document.getElementById('rect0');
+  let speedX = 1;
+  let positionX = 0;
+
+  window.setInterval(() => {
+    positionX = positionX + speedX;
+    if (positionX > maxXPosition || positionX < 0) {
+      speedX = speedX * (-1);
+    }
+    rect.style.left = positionX + 'px';
+  }, refreshRate);
+}
+
+function startAnimFrameAnimation() {
+  const refreshRate = 1000 / 120;
+  const maxXPosition = 1320;
+  let rect = document.getElementById('rect1');
+  let speedX = 1;
+  let positionX = 0;
+
+  function step() {
+    positionX = positionX + speedX;
+    if (positionX > maxXPosition || positionX < 0) {
+      speedX = speedX * (-1);
+    }
+    rect.style.left = positionX + 'px';
+    window.requestAnimationFrame(step);
+  }
+
+  window.requestAnimationFrame(step);
+}
+</script>
 
     </body>
 </html>
